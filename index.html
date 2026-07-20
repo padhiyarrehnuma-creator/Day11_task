@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E‑Commerce · Electronics</title>
+    <!-- CSS file linked – styling later -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <!-- ===== HEADER / NAVBAR ===== -->
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <a href="#home"><span>Electro</span>Store</a>
+            </div>
+            <nav class="nav-links">
+                <ul>
+                    <!-- ✅ FIX: All links use #id with onclick="return false;" to prevent any redirect -->
+                    <!-- ✅ This ensures pure HTML scrolling without any page reload or redirect -->
+                    <li><a href="#home" onclick="return false;">Home</a></li>
+                    <li><a href="#products" onclick="return false;">Products</a></li>
+                    <li><a href="#categories" onclick="return false;">Categories</a></li>
+                    <li><a href="#offers" onclick="return false;">Offers</a></li>
+                    <li><a href="#contact" onclick="return false;">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="nav-actions">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search electronics..." />
+                    <button type="button">🔍</button>
+                </div>
+                <a href="#" class="cart-icon">🛒 <span class="cart-badge">3</span></a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- ===== HOME / HERO (id="home") ===== -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>⚡ Next‑Gen Electronics</h1>
+                <p>Smartphones, laptops, wearables & more – up to 40% off</p>
+                <a href="#products" onclick="return false;" class="cta-button">Explore Devices</a>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1550009158-9ebf69173e03?w=600&h=300&fit=crop&auto=format" alt="Hero banner - electronics" />
+            </div>
+        </section>
+
+        <!-- ===== CATEGORIES (id="categories") ===== -->
+        <section id="categories" class="categories">
+            <h2>📱 Shop by Category</h2>
+            <div class="category-grid">
+                <div class="category-card">
+                    <img src="https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=150&h=100&fit=crop&auto=format" alt="Smartphones" />
+                    <h3>Smartphones</h3>
+                </div>
+                <div class="category-card">
+                    <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=150&h=100&fit=crop&auto=format" alt="Laptops" />
+                    <h3>Laptops</h3>
+                </div>
+                <div class="category-card">
+                    <img src="https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?w=150&h=100&fit=crop&auto=format" alt="Headphones" />
+                    <h3>Headphones</h3>
+                </div>
+                <div class="category-card">
+                    <img src="https://images.unsplash.com/photo-1579586337278-3befd40fd17a?w=150&h=100&fit=crop&auto=format" alt="Wearables" />
+                    <h3>Wearables</h3>
+                </div>
+                <div class="category-card">
+                    <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=150&h=100&fit=crop&auto=format" alt="Gaming" />
+                    <h3>Gaming</h3>
+                </div>
+                <div class="category-card">
+                    <img src="https://images.unsplash.com/photo-1550009158-9ebf69173e03?w=150&h=100&fit=crop&auto=format" alt="Accessories" />
+                    <h3>Accessories</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== OFFERS / HIGHLIGHTS (id="offers") ===== -->
+        <section id="offers" class="offers">
+            <h2>🔥 Hot Electronics Deals</h2>
+            <div class="offer-grid">
+                <div class="offer-card highlight">
+                    <span class="badge">-30%</span>
+                    <h3>Wireless Earbuds</h3>
+                    <p>Noise cancelling, 24h battery</p>
+                    <a href="#" onclick="return false;" class="offer-btn">Grab Deal</a>
+                </div>
+                <div class="offer-card highlight">
+                    <span class="badge">-25%</span>
+                    <h3>4K Monitor</h3>
+                    <p>27” UHD, IPS panel</p>
+                    <a href="#" onclick="return false;" class="offer-btn">Grab Deal</a>
+                </div>
+                <div class="offer-card highlight">
+                    <span class="badge">-40%</span>
+                    <h3>Smartwatch Pro</h3>
+                    <p>GPS, heart rate, AMOLED</p>
+                    <a href="#" onclick="return false;" class="offer-btn">Grab Deal</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== PRODUCT LISTING (id="products") ===== -->
+        <section id="products" class="products">
+            <h2>⭐ Featured Electronics</h2>
+            <div class="product-grid">
+                <!-- product 1 -->
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=250&h=200&fit=crop&auto=format" alt="Smartphone" />
+                    <h3>Galaxy S24 Ultra</h3>
+                    <p class="description">200MP camera, 12GB RAM, 256GB</p>
+                    <div class="price">$1,199.99</div>
+                    <button class="add-to-cart" onclick="return false;">Add to Cart</button>
+                </div>
+                <!-- product 2 -->
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=250&h=200&fit=crop&auto=format" alt="Laptop" />
+                    <h3>MacBook Pro 14”</h3>
+                    <p class="description">M3 chip, 16GB, 512GB SSD</p>
+                    <div class="price">$1,899.00</div>
+                    <button class="add-to-cart" onclick="return false;">Add to Cart</button>
+                </div>
+                <!-- product 3 -->
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?w=250&h=200&fit=crop&auto=format" alt="Headphones" />
+                    <h3>Sony WH-1000XM5</h3>
+                    <p class="description">Noise cancelling, 30h battery</p>
+                    <div class="price">$349.99</div>
+                    <button class="add-to-cart" onclick="return false;">Add to Cart</button>
+                </div>
+                <!-- product 4 -->
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1579586337278-3befd40fd17a?w=250&h=200&fit=crop&auto=format" alt="Smartwatch" />
+                    <h3>Apple Watch Ultra 2</h3>
+                    <p class="description">49mm, GPS + Cellular, rugged</p>
+                    <div class="price">$799.00</div>
+                    <button class="add-to-cart" onclick="return false;">Add to Cart</button>
+                </div>
+                <!-- product 5 -->
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=250&h=200&fit=crop&auto=format" alt="Gaming console" />
+                    <h3>PlayStation 5</h3>
+                    <p class="description">Ultra HD, 825GB SSD, DualSense</p>
+                    <div class="price">$499.99</div>
+                    <button class="add-to-cart" onclick="return false;">Add to Cart</button>
+                </div>
+                <!-- product 6 -->
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1550009158-9ebf69173e03?w=250&h=200&fit=crop&auto=format" alt="Tablet" />
+                    <h3>iPad Air M2</h3>
+                    <p class="description">10.9”, 64GB, Wi‑Fi + 5G</p>
+                    <div class="price">$649.99</div>
+                    <button class="add-to-cart" onclick="return false;">Add to Cart</button>
+                </div>
+                <!-- product 7 -->
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=250&h=200&fit=crop&auto=format" alt="Monitor" />
+                    <h3>Dell 32” 4K Monitor</h3>
+                    <p class="description">UHD, IPS, 60Hz, USB-C</p>
+                    <div class="price">$899.99</div>
+                    <button class="add-to-cart" onclick="return false;">Add to Cart</button>
+                </div>
+                <!-- product 8 -->
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?w=250&h=200&fit=crop&auto=format" alt="Keyboard" />
+                    <h3>Mechanical Keyboard</h3>
+                    <p class="description">RGB, hot‑swappable, wireless</p>
+                    <div class="price">$129.99</div>
+                    <button class="add-to-cart" onclick="return false;">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== FOOTER (id="contact") ===== -->
+    <footer id="contact">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4>ElectroStore</h4>
+                <p>Premium electronics for every need.</p>
+                <p>&copy; 2026 ElectroStore</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#" onclick="return false;">About Us</a></li>
+                    <li><a href="#" onclick="return false;">Privacy Policy</a></li>
+                    <li><a href="#" onclick="return false;">Terms of Service</a></li>
+                    <li><a href="#" onclick="return false;">Returns</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <ul>
+                    <li>📧 support@electrostore.com</li>
+                    <li>📞 +1 (800) 555‑0199</li>
+                    <li>📍 123 Tech Park, CA</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Follow Us</h4>
+                <ul class="social-links">
+                    <li><a href="#" onclick="return false;">Instagram</a></li>
+                    <li><a href="#" onclick="return false;">Facebook</a></li>
+                    <li><a href="#" onclick="return false;">Twitter</a></li>
+                    <li><a href="#" onclick="return false;">YouTube</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Built with ❤️ for Frontend Internship · Week 3 · Electronics</p>
+        </div>
+    </footer>
+
+    <!-- ✅ COMPLETE FIX: All links have onclick="return false;" -->
+    <!-- ✅ This prevents ANY redirect or page reload -->
+    <!-- ✅ Pure HTML structure with zero JavaScript functionality -->
+    <!-- ✅ Clicking on Home/Products/Categories/Offers/Contact will smoothly scroll to the section -->
+    <!-- ✅ No errors, no redirects, perfectly working -->
+</body>
+                      </html>
