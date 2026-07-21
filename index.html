@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>E‑Commerce · Electronics</title>
-    <!-- CSS file linked – styling later -->
+    <title>ElectroHub · E-Commerce</title>
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -12,214 +11,195 @@
     <header>
         <div class="navbar">
             <div class="logo">
-                <a href="#home"><span>Electro</span>Store</a>
+                <a href="#home"><span>Electro</span>Hub</a>
             </div>
+            
+            <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+            <label for="nav-toggle" class="nav-toggle-label">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            
             <nav class="nav-links">
                 <ul>
-                    <!-- ✅ FIX: All links use #id with onclick="return false;" to prevent any redirect -->
-                    <!-- ✅ This ensures pure HTML scrolling without any page reload or redirect -->
-                    <li><a href="#home" onclick="return false;">Home</a></li>
-                    <li><a href="#products" onclick="return false;">Products</a></li>
-                    <li><a href="#categories" onclick="return false;">Categories</a></li>
-                    <li><a href="#offers" onclick="return false;">Offers</a></li>
-                    <li><a href="#contact" onclick="return false;">Contact</a></li>
+                    <li><a href="#home" class="nav-link active" data-section="home">Home</a></li>
+                    <li><a href="#about" class="nav-link" data-section="about">About Us</a></li>
+                    <li><a href="#products" class="nav-link" data-section="products">Products</a></li>
+                    <li><a href="#offers" class="nav-link" data-section="offers">Offers</a></li>
+                    <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
                 </ul>
             </nav>
+            
             <div class="nav-actions">
                 <div class="search-bar">
-                    <input type="text" placeholder="Search electronics..." />
-                    <button type="button">🔍</button>
+                    <input type="text" placeholder="Search products..." id="searchInput" />
+                    <button type="button" id="searchBtn">🔍</button>
                 </div>
-                <a href="#" class="cart-icon">🛒 <span class="cart-badge">3</span></a>
+                <a href="#" class="cart-icon" id="cartIcon">🛒 <span class="cart-badge" id="cartCount">0</span></a>
             </div>
         </div>
     </header>
 
     <main>
-        <!-- ===== HOME / HERO (id="home") ===== -->
-        <section id="home" class="hero">
-            <div class="hero-content">
-                <h1>⚡ Next‑Gen Electronics</h1>
-                <p>Smartphones, laptops, wearables & more – up to 40% off</p>
-                <a href="#products" onclick="return false;" class="cta-button">Explore Devices</a>
-            </div>
-            <div class="hero-image">
-                <img src="https://images.unsplash.com/photo-1550009158-9ebf69173e03?w=600&h=300&fit=crop&auto=format" alt="Hero banner - electronics" />
-            </div>
-        </section>
-
-        <!-- ===== CATEGORIES (id="categories") ===== -->
-        <section id="categories" class="categories">
-            <h2>📱 Shop by Category</h2>
-            <div class="category-grid">
-                <div class="category-card">
-                    <img src="https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=150&h=100&fit=crop&auto=format" alt="Smartphones" />
-                    <h3>Smartphones</h3>
+        <!-- ===== HOME SECTION ===== -->
+        <section id="home" class="section active">
+            <div class="hero">
+                <div class="hero-content">
+                    <h1>⚡ Next‑Gen Electronics</h1>
+                    <p>Smartphones, laptops, wearables & more – up to 40% off</p>
+                    <a href="#products" class="cta-button">Explore Devices</a>
                 </div>
-                <div class="category-card">
-                    <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=150&h=100&fit=crop&auto=format" alt="Laptops" />
-                    <h3>Laptops</h3>
-                </div>
-                <div class="category-card">
-                    <img src="https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?w=150&h=100&fit=crop&auto=format" alt="Headphones" />
-                    <h3>Headphones</h3>
-                </div>
-                <div class="category-card">
-                    <img src="https://images.unsplash.com/photo-1579586337278-3befd40fd17a?w=150&h=100&fit=crop&auto=format" alt="Wearables" />
-                    <h3>Wearables</h3>
-                </div>
-                <div class="category-card">
-                    <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=150&h=100&fit=crop&auto=format" alt="Gaming" />
-                    <h3>Gaming</h3>
-                </div>
-                <div class="category-card">
-                    <img src="https://images.unsplash.com/photo-1550009158-9ebf69173e03?w=150&h=100&fit=crop&auto=format" alt="Accessories" />
-                    <h3>Accessories</h3>
+                <div class="hero-image">
+                    <img src="https://images.unsplash.com/photo-1550009158-9ebf69173e03?w=600&h=300&fit=crop&auto=format" alt="Hero banner" />
                 </div>
             </div>
         </section>
 
-        <!-- ===== OFFERS / HIGHLIGHTS (id="offers") ===== -->
-        <section id="offers" class="offers">
+        <!-- ===== ABOUT US SECTION ===== -->
+        <section id="about" class="section active">
+            <h2>About ElectroHub</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Welcome to <strong>ElectroHub</strong> – your premier destination for cutting-edge electronics and gadgets. Founded in 2026, we are passionate about bringing the latest technology to your doorstep at the most competitive prices.</p>
+                    <p>Our mission is to provide high-quality products with exceptional customer service. From smartphones and laptops to smartwatches and gaming consoles, we curate the best from leading brands.</p>
+                    <p>🌟 <strong>Why choose us?</strong></p>
+                    <ul class="about-features">
+                        <li>✅ 100% Authentic Products</li>
+                        <li>✅ Fast & Free Delivery</li>
+                        <li>✅ 24/7 Customer Support</li>
+                        <li>✅ Easy Returns & Exchanges</li>
+                    </ul>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1498049794561-7780e7231661?w=500&h=300&fit=crop&auto=format" alt="About ElectroHub" />
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== PRODUCTS SECTION ===== -->
+        <section id="products" class="section active">
+            <h2>⭐ Featured Electronics</h2>
+            <div class="product-grid" id="productGrid">
+                <!-- Products rendered by JavaScript -->
+            </div>
+        </section>
+
+        <!-- ===== OFFERS SECTION ===== -->
+        <section id="offers" class="section active">
             <h2>🔥 Hot Electronics Deals</h2>
             <div class="offer-grid">
                 <div class="offer-card highlight">
                     <span class="badge">-30%</span>
                     <h3>Wireless Earbuds</h3>
                     <p>Noise cancelling, 24h battery</p>
-                    <a href="#" onclick="return false;" class="offer-btn">Grab Deal</a>
+                    <a href="#" class="offer-btn">Grab Deal</a>
                 </div>
                 <div class="offer-card highlight">
                     <span class="badge">-25%</span>
                     <h3>4K Monitor</h3>
                     <p>27” UHD, IPS panel</p>
-                    <a href="#" onclick="return false;" class="offer-btn">Grab Deal</a>
+                    <a href="#" class="offer-btn">Grab Deal</a>
                 </div>
                 <div class="offer-card highlight">
                     <span class="badge">-40%</span>
                     <h3>Smartwatch Pro</h3>
                     <p>GPS, heart rate, AMOLED</p>
-                    <a href="#" onclick="return false;" class="offer-btn">Grab Deal</a>
+                    <a href="#" class="offer-btn">Grab Deal</a>
                 </div>
             </div>
         </section>
 
-        <!-- ===== PRODUCT LISTING (id="products") ===== -->
-        <section id="products" class="products">
-            <h2>⭐ Featured Electronics</h2>
-            <div class="product-grid">
-                <!-- product 1 -->
-                <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=250&h=200&fit=crop&auto=format" alt="Smartphone" />
-                    <h3>Galaxy S24 Ultra</h3>
-                    <p class="description">200MP camera, 12GB RAM, 256GB</p>
-                    <div class="price">$1,199.99</div>
-                    <button class="add-to-cart" onclick="return false;">Add to Cart</button>
+        <!-- ===== CONTACT SECTION ===== -->
+        <section id="contact" class="section active">
+            <h2>📧 Create Account</h2>
+            <div class="contact-container">
+                <!-- Create Account Form -->
+                <div class="form-box" id="signupBox">
+                    <h3>Create Account</h3>
+                    <form id="signupForm">
+                        <input type="text" placeholder="Full Name" required />
+                        <input type="email" placeholder="Email" required />
+                        <input type="password" placeholder="Password" required />
+                        <input type="password" placeholder="Confirm Password" required />
+                        <button type="submit">Create Account</button>
+                    </form>
+                    <p class="toggle-text">
+                        Already have an account? 
+                        <a href="#" id="showLogin">Login now</a>
+                    </p>
                 </div>
-                <!-- product 2 -->
-                <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=250&h=200&fit=crop&auto=format" alt="Laptop" />
-                    <h3>MacBook Pro 14”</h3>
-                    <p class="description">M3 chip, 16GB, 512GB SSD</p>
-                    <div class="price">$1,899.00</div>
-                    <button class="add-to-cart" onclick="return false;">Add to Cart</button>
-                </div>
-                <!-- product 3 -->
-                <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?w=250&h=200&fit=crop&auto=format" alt="Headphones" />
-                    <h3>Sony WH-1000XM5</h3>
-                    <p class="description">Noise cancelling, 30h battery</p>
-                    <div class="price">$349.99</div>
-                    <button class="add-to-cart" onclick="return false;">Add to Cart</button>
-                </div>
-                <!-- product 4 -->
-                <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1579586337278-3befd40fd17a?w=250&h=200&fit=crop&auto=format" alt="Smartwatch" />
-                    <h3>Apple Watch Ultra 2</h3>
-                    <p class="description">49mm, GPS + Cellular, rugged</p>
-                    <div class="price">$799.00</div>
-                    <button class="add-to-cart" onclick="return false;">Add to Cart</button>
-                </div>
-                <!-- product 5 -->
-                <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=250&h=200&fit=crop&auto=format" alt="Gaming console" />
-                    <h3>PlayStation 5</h3>
-                    <p class="description">Ultra HD, 825GB SSD, DualSense</p>
-                    <div class="price">$499.99</div>
-                    <button class="add-to-cart" onclick="return false;">Add to Cart</button>
-                </div>
-                <!-- product 6 -->
-                <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1550009158-9ebf69173e03?w=250&h=200&fit=crop&auto=format" alt="Tablet" />
-                    <h3>iPad Air M2</h3>
-                    <p class="description">10.9”, 64GB, Wi‑Fi + 5G</p>
-                    <div class="price">$649.99</div>
-                    <button class="add-to-cart" onclick="return false;">Add to Cart</button>
-                </div>
-                <!-- product 7 -->
-                <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=250&h=200&fit=crop&auto=format" alt="Monitor" />
-                    <h3>Dell 32” 4K Monitor</h3>
-                    <p class="description">UHD, IPS, 60Hz, USB-C</p>
-                    <div class="price">$899.99</div>
-                    <button class="add-to-cart" onclick="return false;">Add to Cart</button>
-                </div>
-                <!-- product 8 -->
-                <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?w=250&h=200&fit=crop&auto=format" alt="Keyboard" />
-                    <h3>Mechanical Keyboard</h3>
-                    <p class="description">RGB, hot‑swappable, wireless</p>
-                    <div class="price">$129.99</div>
-                    <button class="add-to-cart" onclick="return false;">Add to Cart</button>
+
+                <!-- Login Form -->
+                <div class="form-box" id="loginBox" style="display: none;">
+                    <h3>Login</h3>
+                    <form id="loginForm">
+                        <input type="email" placeholder="Email" required />
+                        <input type="password" placeholder="Password" required />
+                        <button type="submit">Login</button>
+                    </form>
+                    <p class="toggle-text">
+                        Don't have an account? 
+                        <a href="#" id="showSignup">Create account</a>
+                    </p>
                 </div>
             </div>
         </section>
+
+        <!-- ===== CART OVERLAY ===== -->
+        <div id="cartOverlay" class="cart-overlay">
+            <div class="cart-panel">
+                <div class="cart-header">
+                    <h2>🛒 Your Cart</h2>
+                    <button id="closeCart" class="close-cart">✕</button>
+                </div>
+                <div id="cartItems"></div>
+                <div id="cartTotal"></div>
+            </div>
+        </div>
     </main>
 
-    <!-- ===== FOOTER (id="contact") ===== -->
-    <footer id="contact">
+    <!-- ===== FOOTER ===== -->
+    <footer>
         <div class="footer-container">
             <div class="footer-col">
-                <h4>ElectroStore</h4>
+                <h4>ElectroHub</h4>
                 <p>Premium electronics for every need.</p>
-                <p>&copy; 2026 ElectroStore</p>
+                <p>&copy; 2026 ElectroHub</p>
             </div>
             <div class="footer-col">
                 <h4>Quick Links</h4>
                 <ul>
-                    <li><a href="#" onclick="return false;">About Us</a></li>
-                    <li><a href="#" onclick="return false;">Privacy Policy</a></li>
-                    <li><a href="#" onclick="return false;">Terms of Service</a></li>
-                    <li><a href="#" onclick="return false;">Returns</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#offers">Offers</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
             <div class="footer-col">
                 <h4>Contact</h4>
                 <ul>
-                    <li>📧 support@electrostore.com</li>
-                    <li>📞 +1 (800) 555‑0199</li>
-                    <li>📍 123 Tech Park, CA</li>
+                    <li>📧 rehnumapadhiyar@gmail.com</li>
+                    <li>📞 +91 74878 14056</li>
+                    <li>📍 Ahmedabad</li>
                 </ul>
             </div>
             <div class="footer-col">
                 <h4>Follow Us</h4>
                 <ul class="social-links">
-                    <li><a href="#" onclick="return false;">Instagram</a></li>
-                    <li><a href="#" onclick="return false;">Facebook</a></li>
-                    <li><a href="#" onclick="return false;">Twitter</a></li>
-                    <li><a href="#" onclick="return false;">YouTube</a></li>
+                    <li><a href="https://www.instagram.com/">Instagram</a></li>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">YouTube</a></li>
                 </ul>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>Built with ❤️ for Frontend Internship · Week 3 · Electronics</p>
+            <p>Built with ❤️ for Frontend Internship · Week 3</p>
         </div>
     </footer>
 
-    <!-- ✅ COMPLETE FIX: All links have onclick="return false;" -->
-    <!-- ✅ This prevents ANY redirect or page reload -->
-    <!-- ✅ Pure HTML structure with zero JavaScript functionality -->
-    <!-- ✅ Clicking on Home/Products/Categories/Offers/Contact will smoothly scroll to the section -->
-    <!-- ✅ No errors, no redirects, perfectly working -->
+    <script src="script.js"></script>
 </body>
-                      </html>
+    </html>
